@@ -28,9 +28,8 @@ function App() {
       </header>
         <main className="content">
           <h3>{imgTitle}</h3>
-          <h6>{imgDate}</h6>
           <img id="image" src={imgUrl}></img>
-
+          <h6>{imgDate}</h6>
 
           <button 
             className="btn"
