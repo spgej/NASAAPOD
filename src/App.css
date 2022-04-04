@@ -5,10 +5,15 @@ html {
 
 p {
   max-width: 500px;
+  height: auto;
   justify-content: center;
   text-align: left;
   margin: auto;
   font-size: .8rem;
+  background-color: #1a1d24;
+  padding: 1rem;
+  border-radius: .25rem;
+
 }
 
 .App {
@@ -40,16 +45,23 @@ img {
   height: 500px;
   width: 500px;
   object-fit: cover;
-  border-radius: 1.2rem;
+  border-radius: .3rem;
 }
 
 .btn {
   display: block;
+  background-color: #1a1d24;
   margin: 1.1rem auto;
   height: 50px;
   width: 200px;
   border-radius: 1.2rem;
+  border: #1a1d24;
+  color: #fdfdfd;
   font-size: 1.2rem;
+}
+
+.btn:hover {
+  background-color: #3c3f43;
 }
 
 .content h6 {
