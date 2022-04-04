@@ -3,18 +3,14 @@ html {
   background: url("https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
   background-size: cover;
   background-attachment: fixed;
-  
-  
 }
 
 .description {
   max-width: 600px;
-  margin: 30px auto;
+  margin: 30px;
   height: auto;
   text-align: left;
-  font-size: 1.1rem;
-  background-color: #1a1d24;
-  border-radius: .25rem;
+  font-size: calc(4px + 2vim);
   font-family: 'Titillium Web', sans-serif;
   font-weight: 200;
   display: -webkit-box;
@@ -27,10 +23,8 @@ html {
   height: auto;
   text-align: left;
   font-size: 1.1rem;
-  background-color: #1a1d24;
-  border-radius: .25rem;
-  font-family: 'Titillium Web', sans-serif;
   font-weight: 200;
+  margin: 30px;
 }
 
 .App {
@@ -38,31 +32,32 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  min-height: 85vh;
+  margin: 40px auto;
   text-align: center;
   font-family: 'Titillium Web', sans-serif;
-  max-width: 700px;
+  width: 600px;
   background-color: #1a1d24;
+  border-radius: .5rem;
 
 }
 
 .App-header {
-  min-height: 3rem;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  margin-top: 2rem;
+
 }
 
 .content {
   color: white;
-  width: 400px;
+  max-width: 500px;
   height: auto;
-  margin-bottom: 40px;
+}
+
+.content h2 {
+  font-size: 1.8rem;
 }
 
 img {
-  height: 400px;
-  width: 400px;
+  width: 100%;
   object-fit: cover;
   border-radius: .3rem;
 }
@@ -81,7 +76,7 @@ img {
 
 .btn:hover {
   background-color: #1a1d24;
-  border: solid 1px white;
+  border: solid .5px white;
 }
 
 .btn2 {
@@ -90,4 +85,24 @@ img {
 
 .content h6 {
   margin: 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .App {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 350px) {
+  .btn {
+    width: 100%;
+    border-radius: 0;
+  }
 }

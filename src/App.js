@@ -32,11 +32,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h2>Astronomy Picture of the Day</h2>
+     
       </header>
         <main className="content">
+        <h2>Astronomy Picture of the Day</h2>
           <h3>{imgTitle}</h3>
-          <img id="image" src={imgUrl}></img>
+          <img id="image" alt="space-pic" src={imgUrl}></img>
           <h6>{imgDate}</h6>
 
           <button 
