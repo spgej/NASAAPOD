@@ -10,6 +10,13 @@ function App() {
   const [imgTitle, setImgTitle] = useState('Daily Image Title');
   const [imgDate, setImgDate] = useState('Date the image was taken.');
   const [imgInfo, setImgInfo] = useState('Description of the daily image.');
+  const [description, setDescription] = useState("description");
+
+
+  const unTruncate = () => {
+    setDescription("description2");
+    document.getElementById("btn").className="btn2";
+  }
 
   async function fetchNasa() {
     let response = await fetch(NASA_API);
@@ -18,12 +25,13 @@ function App() {
     setImgDate(data[0].date)
     setImgInfo(data[0].explanation)
     setImgTitle(data[0].title)
+    setDescription("description");
+    document.getElementById("btn").className="btn";
   }
 
   return (
     <div className="App">
       <header className="App-header">
-      <h1>NASA</h1>
       <h2>Astronomy Picture of the Day</h2>
       </header>
         <main className="content">
@@ -39,7 +47,8 @@ function App() {
             >
             New Image
             </button>
-            <p>{imgInfo}</p>
+            <p className={description}>{imgInfo}</p>
+            <button id="btn" className="btn" onClick={()=> unTruncate()} >Learn More</button>
         </main>
     </div>
   );
