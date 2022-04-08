@@ -43,6 +43,7 @@ html {
   width: 600px;
   background-color: #1a1d24;
   border-radius: .5rem;
+  padding: 50px 0;
 
 }
 
@@ -65,7 +66,7 @@ html {
 
 .footer p {
   text-align: center;
-  opacity: 30%;
+  opacity: 50%;
   font-size: .7rem;
 }
 
@@ -77,6 +78,7 @@ html {
 
 .content h2 {
   font-size: 1.9rem;
+  margin-top: 0;
 }
 
 #image {
@@ -89,14 +91,14 @@ html {
 .buttons {
   display: flex;
   justify-content: center;
-  margin-bottom: 25px;
 }
 
 .btn {
   display: block;
   background-color: #3c3f43;
+  font-family: 'Titillium Web', sans-serif;
   margin: auto 10px;
-  height:50px;
+  height: 50px;
   width: 225px;
   border-radius: .3rem;
   border: #1a1d24;
