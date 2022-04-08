@@ -1,7 +1,6 @@
 import './App.css';
-import { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import { useState, useEffect } from "react";
+
 const NASA_API =
   "https://api.nasa.gov/planetary/apod?api_key=HrgvaTyc5brnhHTM6peabL5SWx5JlB4x4g5M1ybR&count=1";
 
@@ -19,9 +18,16 @@ function App() {
     setIsTruncated(true);
   }
 
+  useEffect(() => {
+    fetchNasa();
+  }, []);
+
+  if (!response.url) {
+    return <h1 style={{ color: "white" }}>Loading...</h1>;
+  }
+
   return (
     <div className="App">
-    <Header />
         <main className="content">
         <h2>Astronomy Picture of the Day</h2>
           <h3>{response.title}</h3>
@@ -39,7 +45,6 @@ function App() {
             <p className={isTruncated ? "description" : "description2"}>{response.explanation}</p>
             <button id="btn" className={isTruncated ? "btn" : "btn2"} onClick={()=> setIsTruncated(false)} >Learn More</button>
         </main>
-        <Footer />
     </div>
   );
 }
