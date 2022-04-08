@@ -1,7 +1,10 @@
 import './App.css';
 import { useState } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 const NASA_API =
   "https://api.nasa.gov/planetary/apod?api_key=HrgvaTyc5brnhHTM6peabL5SWx5JlB4x4g5M1ybR&count=1";
+
 
 
 function App() {
@@ -18,9 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-     
-      </header>
+    <Header />
         <main className="content">
         <h2>Astronomy Picture of the Day</h2>
           <h3>{response.title}</h3>
@@ -38,6 +39,7 @@ function App() {
             <p className={isTruncated ? "description" : "description2"}>{response.explanation}</p>
             <button id="btn" className={isTruncated ? "btn" : "btn2"} onClick={()=> setIsTruncated(false)} >Learn More</button>
         </main>
+        <Footer />
     </div>
   );
 }
