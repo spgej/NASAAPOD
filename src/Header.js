@@ -2,9 +2,10 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className="header">
-        <image className="nasa-logo"></image>
-    </header>
+    <div className="header">
+      TESTING
+        <image alt="" src="/NAhttps://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svgSA-logo.svg" className="nasa-logo"></image>
+    </div>
   )
 }
 

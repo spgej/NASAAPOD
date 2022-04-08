@@ -30,10 +30,14 @@ function App() {
     <div className="App">
         <main className="content">
         <h2>Astronomy Picture of the Day</h2>
+        
           <h3>{response.title}</h3>
           <img id="image" alt="space-pic" src={response.url}></img>
           <h6>{response.date}</h6>
 
+          
+            <p className={isTruncated ? "description" : "description2"}>{response.explanation}</p>
+          <div className="buttons">
           <button 
             className="btn"
             onClick={() => {
@@ -42,8 +46,9 @@ function App() {
             >
             New Image
             </button>
-            <p className={isTruncated ? "description" : "description2"}>{response.explanation}</p>
             <button id="btn" className={isTruncated ? "btn" : "btn2"} onClick={()=> setIsTruncated(false)} >Learn More</button>
+
+          </div> 
         </main>
     </div>
   );

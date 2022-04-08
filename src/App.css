@@ -7,7 +7,7 @@ html {
 
 .description {
   max-width: 600px;
-  margin: 30px;
+  margin: 20px 30px 50px;
   height: auto;
   text-align: left;
   font-size: calc(4px + 2vim);
@@ -32,8 +32,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 85vh;
-  margin: 40px auto;
+  margin: 90px auto 60px;
   text-align: center;
   font-family: 'Titillium Web', sans-serif;
   width: 600px;
@@ -42,8 +41,25 @@ html {
 
 }
 
-.App-header {
+.header {
+  position:fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #1a1d24;
+  color: white;
+  display: block;
+}
 
+.footer {
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #1a1d24;
+  color: white;
 }
 
 .content {
@@ -53,7 +69,7 @@ html {
 }
 
 .content h2 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 
 img {
@@ -63,12 +79,18 @@ img {
   border-radius: .3rem;
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
 .btn {
   display: block;
-  background-color: #3c3f43;;
-  margin: 1.1rem auto;
-  height: 35px;
-  width: 175px;
+  background-color: #3c3f43;
+  margin: auto 10px;
+  height:50px;
+  width: 225px;
   border-radius: .3rem;
   border: #1a1d24;
   color: #fdfdfd;
